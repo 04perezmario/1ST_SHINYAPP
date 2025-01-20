@@ -4,16 +4,23 @@ library(bslib)
 
 # Definir la Interfaz de Usuario (UI) ----
 ui <- page_sidebar(
+  #el hello world solo sale arriba a la izquierda 
   title = "Hello World!",  # Título de la app
   sidebar = sidebar(
     "Sidebar", 
+    #la sidebar solo sale a la derecha
     position = "right",
+
+#el sliderinput es un control deslizante ajusta el número de barras en un histograma.
     sliderInput("bins", "Número de barras en el histograma:", 
                 min = 1, max = 50, value = 30)  # Control deslizante para ajustar el número de barras
   ),
   
   # Contenido principal
+
+  #Card es un componente de interfaz de usuario que se utiliza para organizar y agrupar contenido dentro de una tarjeta visual. 
   card(
+    
     card_header("Bienvenido a Shiny"),  # Encabezado de la tarjeta
     "Aquí puedes crear una interfaz de usuario interactiva."
   ),
